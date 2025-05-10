@@ -78,6 +78,7 @@ label {
 }
 
 input[type="email"],
+input[type="text"],
 input[type="password"] {
   width: 100%;
   padding: 10px 5px;
@@ -157,4 +158,27 @@ input:focus {
     flex: 1;
     padding: 40px 30px;
   }
+}
+
+select.custom-select {
+  width: 100%;
+  padding: 10px 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  background-color: transparent;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23999' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 10px;
+}
+
+select.custom-select:focus {
+  outline: none;
+  border-color: #219EBC;
 }
