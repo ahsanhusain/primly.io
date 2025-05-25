@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeLikeButtons();
   initializeGuestSelect();
   initializeDateInputs();
-  initializeResponsiveNav();
 });
 
 // Search box functionality

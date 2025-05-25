@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primly - Discover Your Next Destination</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/discover-destination.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+          <div class="logo">Primly</div>
+    
+          <div class="top-section">
+            <div class="center-top">
+              <div class="nav-search-box">
+                <input type="text" placeholder="Search">
+              </div>
+    
+              <div class="user-dropdown" id="userDropdown">
+                <span>👤</span>
+                <span>Atif Host</span>
+                <span>▼</span>
+                <div class="dropdown-menu">
+                  <a href="#">Profile</a>
+                  <a href="#">Logout</a>
+                </div>
+              </div>
+            </div>
+    
+            <button class="hamburger" id="hamburger">&#9776;</button>
+    
+            <div class="nav-links" id="navLinks">
+              <a href="#"><span>🏠</span> Home</a>
+              <a href="#"><span>🛏️</span> Rooms</a>
+              <a href="#"><span>🍽️</span> Services</a>
+              <a href="#"><span>📬</span> Booking Requests</a>
+              <a href="#"><span>📖</span> My Bookings</a>
+              <a href="#"><span>💬</span> My Inbox <span class="dot"></span></a>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Discover Your Next Destination</h1>
+                    <p class="hero-subtitle">Browse our curated travel spots - from ancient forts to peaceful valleys. Filter by region, popularity, or recent recommendations</p>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/imgs/walk_around_the_world.png" alt="Travel illustration" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters">
+        <div class="container">
+            <div class="filters-row">
+                <!-- Location Filter -->
+                <div class="filter-dropdown">
+                    <button class="filter-btn" id="locationBtn">
+                        <span class="filter-icon">📍</span>
+                        <span class="filter-text">Location</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="ddropdown-menu" id="locationMenu">
+                        <a href="#" class="ddropdown-item">Karachi</a>
+                        <a href="#" class="ddropdown-item">Lahore</a>
+                        <a href="#" class="ddropdown-item">Islamabad</a>
+                        <a href="#" class="ddropdown-item">Multan</a>
+                    </div>
+                </div>
+
+                <!-- Province Filter -->
+                <div class="filter-dropdown">
+                    <button class="filter-btn" id="provinceBtn">
+                        <span class="filter-icon">🏛️</span>
+                        <span class="filter-text">Province/state</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="ddropdown-menu" id="provinceMenu">
+                        <a href="#" class="ddropdown-item">Punjab</a>
+                        <a href="#" class="ddropdown-item">Sindh</a>
+                        <a href="#" class="ddropdown-item">KPK</a>
+                        <a href="#" class="ddropdown-item">Balochistan</a>
+                    </div>
+                </div>
+
+                <!-- Type Filter -->
+                <div class="filter-dropdown">
+                    <button class="filter-btn" id="typeBtn">
+                        <span class="filter-icon">🏰</span>
+                        <span class="filter-text">Type (Nature, Historical, Luxury, Budget)</span>
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="ddropdown-menu" id="typeMenu">
+                        <a href="#" class="ddropdown-item">Historical</a>
+                        <a href="#" class="ddropdown-item">Nature</a>
+                        <a href="#" class="ddropdown-item">Luxury</a>
+                        <a href="#" class="ddropdown-item">Budget</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Places Section -->
+    <section class="popular-places">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Popular Historical Places</h2>
+                <a href="#" class="view-all">View All</a>
+            </div>
+
+            <div class="places-grid">
+                <!-- Card 1 -->
+                <div class="place-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1466442929976-97f336a657be?w=300&h=200&fit=crop" alt="Derawar Fort">
+                        <div class="recommended-badge">Recommended</div>
+                        <div class="card-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🔗</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Derawar Fort</h3>
+                        <p class="card-description">Explore the historic magnificence of Derawar</p>
+                        <div class="card-meta">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">Explore</span>
+                            </div>
+                            <span class="date">Today 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="place-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=300&h=200&fit=crop" alt="Derawar Fort">
+                        <div class="recommended-badge">Recommended</div>
+                        <div class="card-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🔗</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Derawar Fort</h3>
+                        <p class="card-description">Explore the historic magnificence of Derawar</p>
+                        <div class="card-meta">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">Explore</span>
+                            </div>
+                            <span class="date">Today 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="place-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=300&h=200&fit=crop" alt="Derawar Fort">
+                        <div class="recommended-badge">Recommended</div>
+                        <div class="card-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🔗</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Derawar Fort</h3>
+                        <p class="card-description">Explore the historic magnificence of Derawar</p>
+                        <div class="card-meta">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">Explore</span>
+                            </div>
+                            <span class="date">Today 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="place-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=300&h=200&fit=crop" alt="Derawar Fort">
+                        <div class="recommended-badge">Recommended</div>
+                        <div class="card-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🔗</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Derawar Fort</h3>
+                        <p class="card-description">Explore the historic magnificence of Derawar</p>
+                        <div class="card-meta">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">Explore</span>
+                            </div>
+                            <span class="date">Today 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="place-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=300&h=200&fit=crop" alt="Derawar Fort">
+                        <div class="recommended-badge">Recommended</div>
+                        <div class="card-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🔗</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Derawar Fort</h3>
+                        <p class="card-description">Explore the historic magnificence of Derawar</p>
+                        <div class="card-meta">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">Explore</span>
+                            </div>
+                            <span class="date">Today 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="place-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=300&h=200&fit=crop" alt="Derawar Fort">
+                        <div class="recommended-badge">Recommended</div>
+                        <div class="card-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🔗</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Derawar Fort</h3>
+                        <p class="card-description">Explore the historic magnificence of Derawar</p>
+                        <div class="card-meta">
+                            <div class="rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                                <span class="rating-text">Explore</span>
+                            </div>
+                            <span class="date">Today 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- ... keep existing code (footer content) -->
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="#">Primly</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Listing</a></li>
+                            <li><a href="#">Request</a></li>
+                            <li><a href="#">Booking</a></li>
+                            <li><a href="#">Inbox</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <span>+92 31235678900</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <span>example@gmail.com</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span>Location: Pakistan</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                </div>
+                <div class="copyright">
+                    <p>© 2023 - 2025 Primly™ Travel Inc.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/discover-destination.js"></script>
+</body>
+</html>
