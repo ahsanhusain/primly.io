@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add loading state to images
     document.querySelectorAll('img').forEach(img => {
         if (!img.complete) {
-            img.style.opacity = '0';
+            //img.style.opacity = '0';
         }
     });
 });
