@@ -20,9 +20,9 @@
     flex: 1;
     background-color: #fff;
     padding: 60px 50px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
   }
   
   .brand-pill {

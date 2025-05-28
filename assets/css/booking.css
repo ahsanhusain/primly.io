@@ -362,7 +362,7 @@ main {
   }
   
   .hero-content {
-      padding-bottom: 120px;
+      padding-bottom: 140px;
   }
   
   .hero-content h1 {
@@ -370,7 +370,7 @@ main {
   }
   
   .search-box {
-      bottom: -80px;
+      bottom: -75px;
   }
 }
 

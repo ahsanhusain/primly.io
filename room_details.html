@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Details - Travel Request</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/room_details.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Primly</div>
+    
+            <div class="top-section">
+
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                
+                <div class="center-top">
+                    <div class="nav-search-box">
+                    <input type="text" placeholder="Search">
+                    </div>
+        
+                    <div class="user-dropdown" id="userDropdown">
+                    <span>👤</span>
+                    <span>Atif Host</span>
+                    <span>▼</span>
+                    <div class="dropdown-menu">
+                        <a href="#">Profile</a>
+                        <a href="#">Logout</a>
+                    </div>
+                    </div>
+                </div>
+        
+                <div class="nav-links" id="navLinks">
+                    <a href="#"><span>🏠</span> Home</a>
+                    <a href="#"><span>🛏️</span> Rooms</a>
+                    <a href="#"><span>🍽️</span> Services</a>
+                    <a href="#"><span>📬</span> Booking Requests</a>
+                    <a href="#"><span>📖</span> My Bookings</a>
+                    <a href="#"><span>💬</span> My Inbox <span class="dot"></span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1>Make a Custom Travel Request</h1>
+                    <p>Can't find what you're looking for? Send us your travel preferences, and we'll build a personalized trip for you.</p>
+                </div>
+                <div class="hero-right">
+                    <div class="illustration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Details -->
+    <div class="container">
+        <div class="room-details">
+            <div class="section-header">
+                <h2>Room Details</h2>
+            </div>
+
+            <!-- Image Section -->
+            <div class="image-section">
+                <div class="image-upload-header">
+                    <span></span>
+                    <button class="add-image-btn" onclick="triggerFileInput()">Add new image</button>
+                    <input type="file" id="imageInput" class="file-input" accept="image/*" onchange="handleImageUpload(event)">
+                </div>
+                
+                <div class="carousel-container">
+                    <div class="carousel-wrapper" id="carouselWrapper">
+                        <div class="carousel-slide">
+                            <div class="default-room-image"></div>
+                        </div>
+                    </div>
+                    <button class="carousel-nav prev" onclick="prevSlide()">‹</button>
+                    <button class="carousel-nav next" onclick="nextSlide()">›</button>
+                </div>
+            </div>
+
+            <!-- Basic Information -->
+            <div class="accordion-section">
+                <div class="accordion-header active" onclick="toggleAccordion(this)">
+                    Basic Information
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content active">
+                    <div class="form-group">
+                        <label>Destination Country: Pakistan</label>
+                        <div class="country-highlight">Pakistan</div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-input" value="Property 2">
+                        </div>
+                        <div class="form-group">
+                            <label>Property Type</label>
+                            <div class="custom-dropdown">
+                                <div class="dropdown-toggle" onclick="toggleDropdown(this)">
+                                    Private Property
+                                    <span>▼</span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-option" onclick="selectOption(this, 'Private Property')">Private Property</div>
+                                    <div class="dropdown-option" onclick="selectOption(this, 'Hotel')">Hotel</div>
+                                    <div class="dropdown-option" onclick="selectOption(this, 'Apartment')">Apartment</div>
+                                    <div class="dropdown-option" onclick="selectOption(this, 'Villa')">Villa</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Region</label>
+                            <div class="custom-dropdown">
+                                <div class="dropdown-toggle" onclick="toggleDropdown(this)">
+                                    Gilgit Baltistan
+                                    <span>▼</span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-option" onclick="selectOption(this, 'Gilgit Baltistan')">Gilgit Baltistan</div>
+                                    <div class="dropdown-option" onclick="selectOption(this, 'Punjab')">Punjab</div>
+                                    <div class="dropdown-option" onclick="selectOption(this, 'Sindh')">Sindh</div>
+                                    <div class="dropdown-option" onclick="selectOption(this, 'KPK')">KPK</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>City</label>
+                            <div class="custom-dropdown">
+                                <div class="dropdown-toggle" onclick="toggleDropdown(this)">
+                                    Hunza
+                                    <span>▼</span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-option" onclick="selectOption(this, 'Hunza')">Hunza</div>
+                                    <div class="dropdown-option" onclick="selectOption(this, 'Skardu')">Skardu</div>
+                                    <div class="dropdown-option" onclick="selectOption(this, 'Gilgit')">Gilgit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" class="form-input" value="The is the address of property 2">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea class="form-input" rows="3">The is the address of property 2</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Any Gender</label>
+                        <div class="custom-dropdown">
+                            <div class="dropdown-toggle" onclick="toggleDropdown(this)">
+                                Any Gender
+                                <span>▼</span>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-option" onclick="selectOption(this, 'Any Gender')">Any Gender</div>
+                                <div class="dropdown-option" onclick="selectOption(this, 'Male Only')">Male Only</div>
+                                <div class="dropdown-option" onclick="selectOption(this, 'Female Only')">Female Only</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Check-in</label>
+                            <div class="date-field">
+                                <input type="date" class="date-input" value="2025-12-14" id="checkinDate">
+                                <div class="date-actions">
+                                    <button class="icon-btn edit-btn" onclick="editDate('checkinDate')">✏️</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Check-out</label>
+                            <div class="date-field">
+                                <input type="date" class="date-input" value="2025-03-15" id="checkoutDate">
+                                <div class="date-actions">
+                                    <button class="icon-btn edit-btn" onclick="editDate('checkoutDate')">✏️</button>
+                                    <button class="icon-btn delete-btn" onclick="clearDate('checkoutDate')">🗑️</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rules & Regulations -->
+            <div class="accordion-section">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    Rules & Regulations
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="form-group">
+                        <label>House Rules</label>
+                        <textarea class="form-input" rows="4" placeholder="Enter house rules and regulations..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Primly Tags -->
+            <div class="accordion-section">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    Primly Tags
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="form-group">
+                        <label>Tags</label>
+                        <input type="text" class="form-input" placeholder="Add tags separated by commas...">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Hours -->
+            <div class="accordion-section">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    Service Hours
+                    <span class="accordion-toggle">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Check-in Time</label>
+                            <input type="time" class="form-input" value="14:00">
+                        </div>
+                        <div class="form-group">
+                            <label>Check-out Time</label>
+                            <input type="time" class="form-input" value="11:00">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book Now Section -->
+            <div class="book-now-section">
+                <button class="book-now-btn" onclick="bookNow()">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- ... keep existing code (footer content) -->
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="#">Primly</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Listing</a></li>
+                            <li><a href="#">Request</a></li>
+                            <li><a href="#">Booking</a></li>
+                            <li><a href="#">Inbox</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <span>+92 31235678900</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <span>example@gmail.com</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span>Location: Pakistan</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                </div>
+                <div class="copyright">
+                    <p>© 2023 - 2025 Primly™ Travel Inc.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/room_details.js"></script>
+</body>
+</html>
