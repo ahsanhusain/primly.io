@@ -134,3 +134,35 @@ document.querySelectorAll('.destination-card').forEach(card => {
   card.style.transform = 'translateY(20px)';
   card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const chevron = item.querySelector('.chevron');
+        
+        question.addEventListener('click', function() {
+            const isActive = answer.classList.contains('active');
+            
+            // Close all other FAQ items
+            faqItems.forEach(otherItem => {
+                const otherAnswer = otherItem.querySelector('.faq-answer');
+                const otherQuestion = otherItem.querySelector('.faq-question');
+                const otherChevron = otherItem.querySelector('.chevron');
+                
+                otherAnswer.classList.remove('active');
+                otherQuestion.classList.remove('active');
+                otherChevron.classList.remove('rotated');
+            });
+            
+            // Toggle current item if it wasn't active
+            if (!isActive) {
+                answer.classList.add('active');
+                question.classList.add('active');
+                chevron.classList.add('rotated');
+            }
+        });
+    });
+});
