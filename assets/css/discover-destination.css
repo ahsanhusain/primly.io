@@ -10,8 +10,10 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #e0f7fa 0%, #f0f9ff 100%);
-    padding: 3rem 0;
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 0;
+
 }
 
 .hero-content {
@@ -35,11 +37,6 @@ body {
     line-height: 1.6;
 }
 
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .hero-img {
     max-width: 100%;

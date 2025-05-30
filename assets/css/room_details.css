@@ -6,8 +6,9 @@
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #e8f4f8 0%, #d1e7dd 100%);
-    padding: 60px 0;
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0;
     margin-bottom: 40px;
 }
 
@@ -30,19 +31,6 @@
     font-size: 1.1rem;
     color: #5a6c7d;
     line-height: 1.6;
-}
-
-.hero-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.illustration {
-    width: 100%;
-    max-width: 400px;
-    height: 300px;
-    background: url('../imgs/room_details_hero.png') center/cover;
 }
 
 /* Room Details Section */
