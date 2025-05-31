@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/services.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">Primly</div>
+    
+            <div class="top-section">
+
+                <button class="hamburger" id="hamburger">&#9776;</button>
+                
+                <div class="center-top">
+                    <div class="nav-search-box">
+                    <input type="text" placeholder="Search">
+                    </div>
+        
+                    <div class="user-dropdown" id="userDropdown">
+                    <span>👤</span>
+                    <span>Atif Host</span>
+                    <div class="dropdown-menu">
+                        <a href="#" style="background: linear-gradient(180deg, #4CD5F8 0%, #488FA1 100%);">My Account</a>
+                        <a href="#"> <i class="fa-solid fa-earth-americas"></i> Travel Preferences</a>
+                        <a href="#"> <i class="fa fa-money-bills"></i> Transaction History</a>
+                        <a href="#"> <i class="fa fa-star"></i> My Ratings</a>
+                        <a href="#"> <i class="fa-brands fa-cc-visa"></i> Payment Methods</a>
+                        <a href="terms-conditions.html"> <i class="fa-solid fa-newspaper"></i> Terms & Conditions</a>
+                        <a href="faqs.html"> <i class="fa-solid fa-question"></i> FAQs</a>
+                        <a href="#"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                    </div>
+                    </div>
+                </div>
+        
+                <div class="nav-links" id="navLinks">
+                    <a href="booking.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <a href="room_details.html"><i class="fa-solid fa-bed"></i> Rooms</a>
+                    <a href="#"><i class="fa-solid fa-utensils"></i> Services</a>
+                    <a href="booking-details.html"><i class="fa-solid fa-house-user"></i> Booking Requests</a>
+                    <a href="discover-destination.html"><i class="fa-solid fa-key"></i> My Bookings</a>
+                    <a href="#"><i class="fa-solid fa-inbox"></i> My Inbox <span class="dot"></span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/imgs/service.png');">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Car rentals for any kind of trip</h1>
+                    <p class="hero-subtitle">Great cars at great prices from the biggest rental companies</p>
+                </div>
+                <div class="hero-image">
+                    <div class="car-illustration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Tabs Section -->
+        <section class="tabs-section">
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab(this, 'rent')">Rent a car</div>
+                <div class="tab" onclick="switchTab(this, 'tours')">Tours</div>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <form class="search-form" onsubmit="handleSearch(event)">
+                    <div class="form-group">
+                        <label for="services">Types of services</label>
+                        <select id="services" class="form-control">
+                            <option>Car Rental</option>
+                            <option>Luxury Cars</option>
+                            <option>Economy Cars</option>
+                            <option>SUVs</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="occupancy">Occupancy</label>
+                        <select id="occupancy" class="form-control">
+                            <option>2 adults - 0 children - 1 room</option>
+                            <option>1 adult - 0 children - 1 room</option>
+                            <option>2 adults - 1 children - 1 room</option>
+                            <option>2 adults - 2 children - 2 rooms</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Pick-up Date</label>
+                        <input type="date" id="date" class="form-control" value="2025-04-28">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="search-btn">Search</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Car Listings Section -->
+        <section class="listings-section">
+            <div class="section-header">
+                <h2 class="section-title">Top Fort View Point</h2>
+                <a href="#" class="view-all-link">View All</a>
+            </div>
+
+            <div class="cars-grid">
+                <div class="car-card">
+                    <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1494976649770-174141aff88b?w=400')">
+                        <div class="car-badges">
+                            <span class="recommended-badge">Recommended</span>
+                            <div class="heart-icon" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Car name here!</h3>
+                        <div class="car-details">
+                            <div>
+                                <div class="car-price">RS6547/day</div>
+                                <div class="car-model">type here</div>
+                            </div>
+                        </div>
+                        <button class="explore-btn">Explore</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400')">
+                        <div class="car-badges">
+                            <span class="recommended-badge">Recommended</span>
+                            <div class="heart-icon" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Car name here!</h3>
+                        <div class="car-details">
+                            <div>
+                                <div class="car-price">RS6547/day</div>
+                                <div class="car-model">type here</div>
+                            </div>
+                        </div>
+                        <button class="explore-btn">Explore</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1502877338535-766e1452684a?w=400')">
+                        <div class="car-badges">
+                            <span class="recommended-badge">Recommended</span>
+                            <div class="heart-icon" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Car name here!</h3>
+                        <div class="car-details">
+                            <div>
+                                <div class="car-price">RS6547/day</div>
+                                <div class="car-model">type here</div>
+                            </div>
+                        </div>
+                        <button class="explore-btn">Explore</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=400')">
+                        <div class="car-badges">
+                            <span class="recommended-badge">Recommended</span>
+                            <div class="heart-icon" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Car name here!</h3>
+                        <div class="car-details">
+                            <div>
+                                <div class="car-price">RS6547/day</div>
+                                <div class="car-model">type here</div>
+                            </div>
+                        </div>
+                        <button class="explore-btn">Explore</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1549399937-ef2a3db9f3c1?w=400')">
+                        <div class="car-badges">
+                            <span class="recommended-badge">Recommended</span>
+                            <div class="heart-icon" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Car name here!</h3>
+                        <div class="car-details">
+                            <div>
+                                <div class="car-price">RS6547/day</div>
+                                <div class="car-model">type here</div>
+                            </div>
+                        </div>
+                        <button class="explore-btn">Explore</button>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image" style="background-image: url('https://images.unsplash.com/photo-1493238792000-8113da705763?w=400')">
+                        <div class="car-badges">
+                            <span class="recommended-badge">Recommended</span>
+                            <div class="heart-icon" onclick="toggleLike(this)"></div>
+                        </div>
+                    </div>
+                    <div class="car-info">
+                        <h3 class="car-name">Car name here!</h3>
+                        <div class="car-details">
+                            <div>
+                                <div class="car-price">RS6547/day</div>
+                                <div class="car-model">type here</div>
+                            </div>
+                        </div>
+                        <button class="explore-btn">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- ... keep existing code (footer content) -->
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <a href="#">Primly</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Listing</a></li>
+                            <li><a href="#">Request</a></li>
+                            <li><a href="#">Booking</a></li>
+                            <li><a href="#">Inbox</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <span>+92 31235678900</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <span>example@gmail.com</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <span>Location: Pakistan</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                </div>
+                <div class="copyright">
+                    <p>© 2023 - 2025 Primly™ Travel Inc.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(element, tabType) {
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Add active class to clicked tab
+            element.classList.add('active');
+            
+            console.log('Switched to tab:', tabType);
+        }
+
+        function toggleLike(element) {
+            element.classList.toggle('liked');
+            console.log('Heart clicked');
+        }
+
+        function handleSearch(event) {
+            event.preventDefault();
+            
+            const services = document.getElementById('services').value;
+            const occupancy = document.getElementById('occupancy').value;
+            const date = document.getElementById('date').value;
+            
+            console.log('Search performed:', { services, occupancy, date });
+            alert('Search functionality would be implemented here!');
+        }
+
+        // Set default date to today if not already set
+        window.addEventListener('DOMContentLoaded', function() {
+            const dateInput = document.getElementById('date');
+            if (!dateInput.value) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.value = today;
+            }
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/b0fdd5ba81.js" crossorigin="anonymous"></script>
+    <script src="assets/js/header.js"></script>
+</body>
+</html>
