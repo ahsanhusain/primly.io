@@ -339,3 +339,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.active-page {
+  color: #2b73cb!important;
+}
