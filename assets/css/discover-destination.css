@@ -11,8 +11,8 @@ body {
 /* Hero Section */
 .hero {
     background-size: cover;
-    background-position: center;
-    padding: 10rem 0;
+    background-position: bottom;
+    padding: 12rem 0;
 
 }
 

@@ -7,9 +7,9 @@
 /* Hero Section */
 .hero-section {
     background-size: cover;
-    background-position: center;
-    padding: 160px 0;
-    margin-bottom: 40px;
+    background-position: bottom;
+    padding: 180px 0 285px 0;
+    /* margin-bottom: 40px; */
 }
 
 .hero-content {

@@ -20,7 +20,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
 }
 /* Header Styles */
 header {
@@ -342,4 +342,9 @@ a {
 
 .active-page {
   color: #2b73cb!important;
+}
+
+.section-container {
+    margin: 0 auto;
+    padding: 0 20px;
 }

@@ -189,17 +189,17 @@ main {
 /* Filter Section */
 /* ... keep existing code (filter section styles) */
 .filter-section {
-  max-width: 1200px;
-  margin: 80px auto 30px;
-  display: flex;
-  gap: 10px;
-  padding: 0 20px;
+    margin: 80px auto 30px;
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+    justify-content: space-between;
 }
 
 /* Destinations Section */
 /* ... keep existing code (destinations section styles) */
 .destinations-section {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 40px auto;
   padding: 0 20px;
 }
