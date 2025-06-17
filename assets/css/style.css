@@ -139,6 +139,7 @@ header {
   gap: 25px;
   margin-top: 15px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .nav-links a {
