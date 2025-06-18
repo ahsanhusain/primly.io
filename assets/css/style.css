@@ -125,6 +125,10 @@ header {
   border-bottom: 1px solid #eee;
 }
 
+.dropdown-menu a:hover {
+  background: rgb(188, 222, 238);
+}
+
 .dropdown-menu a:last-child {
   border-bottom: none;
 }
