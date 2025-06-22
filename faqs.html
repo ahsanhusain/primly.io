@@ -12,31 +12,41 @@
             padding: 0 20px;
         }
 
-        /* Header Section */
-        .faq-header {
+        .hero-section {
+            position: relative;
+            padding: 60px 20px 120px;
             text-align: center;
-            padding: 80px 0 60px;
-            background: linear-gradient(135deg, #b3e5fc 0%, #e1f5fe 100%);
-            margin-bottom: 60px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: bottom;
         }
 
-        .faq-header h1 {
-            font-size: 2.5rem;
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3rem;
             font-weight: 700;
-            color: #1a1a1a;
+            color: #2c3e50;
             margin-bottom: 16px;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.02em;
         }
 
-        .faq-header p {
-            font-size: 1.2rem;
-            color: #666;
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: #4a5568;
             font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         /* FAQ Section */
         .faq-section {
-            padding: 0 0 80px;
+            padding: 80px 0 80px;
         }
 
         .faq-title {
@@ -216,11 +226,11 @@
         </div>
     </header>
 
-    <!-- FAQ Header -->
-    <div class="faq-header">
-        <div class="container">
-            <h1>Frequently Asked Questions</h1>
-            <p>Have questions? We've got answers.</p>
+    <!-- FAQ Hero Section -->
+    <div class="hero-section" style="background-image: url('assets/imgs/terms.png');">
+        <div class="hero-content">
+            <h1 class="hero-title">Frequently Asked Questions</h1>
+            <p class="hero-subtitle">Have questions? We've got answers.</p>
         </div>
     </div>
 

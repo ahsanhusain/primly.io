@@ -15,25 +15,36 @@
         }
 
         /* Page Heading */
-        .page-header {
+        .hero-section {
+            position: relative;
+            padding: 60px 20px 120px;
             text-align: center;
-            background: linear-gradient(84.34deg, rgba(168, 216, 228, 0.71) 10.36%, rgba(241, 253, 255, 0.71) 41.74%, rgba(244, 254, 255, 0.71) 91.87%);
-            padding: 100px 0px;
-            border-bottom-right-radius: 70%;
-            border-bottom-left-radius: 6%;
+            overflow: hidden;
+            background-size: cover;
+            background-position: bottom;
         }
 
-        .page-title {
-            font-size: 2.5rem;
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3rem;
             font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 10px;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
         }
 
-        .page-subtitle {
-            font-size: 1.1rem;
-            color: #6c757d;
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: #4a5568;
             font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         /* Thread Section */
@@ -364,12 +375,13 @@
     
     <!-- Main Content -->
 
-    <!-- Page Header -->
-    <div class="page-header">
-        <h1 class="page-title">Inbox</h1>
-        <p class="page-subtitle">Talk to hosts, get updates, and plan smoothly.</p>
+    <!-- Hero Section -->
+    <div class="hero-section" style="background-image: url('assets/imgs/terms.png');">
+        <div class="hero-content">
+            <h1 class="hero-title">Inbox</h1>
+            <p class="hero-subtitle">Talk to hosts, get updates, and plan smoothly.</p>
+        </div>
     </div>
-
 
     <div class="container">
         

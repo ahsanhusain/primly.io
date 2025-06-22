@@ -145,7 +145,7 @@
   
   .right {
     flex: 1;
-    background: url('../imgs/lady_side_page_1.png') no-repeat center center;
+    background: url('../imgs/auth.png') no-repeat center center;
     background-size: contain;
   }
   

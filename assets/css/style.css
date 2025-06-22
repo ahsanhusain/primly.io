@@ -81,10 +81,10 @@ header {
 }
 
 .nav-search-box::before {
-  content: "🔍";
+  content: url('../../assets/imgs/header/search.svg');
   position: absolute;
   left: 15px;
-  top: 50%;
+  top: 59%;
   transform: translateY(-50%);
   font-size: 1rem;
   color: #888;
@@ -230,7 +230,7 @@ footer {
 .footer-top {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 250px;
   margin-bottom: 40px;
 }
 
@@ -258,6 +258,7 @@ footer {
 .footer-links {
   flex: 2;
   display: flex;
+  justify-content: space-between;
   gap: 50px;
 }
 
