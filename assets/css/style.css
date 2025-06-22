@@ -349,8 +349,40 @@ a {
 .active-page {
   color: #2b73cb!important;
 }
+.active-page-icon{
+  background-color: #2b73cb!important;
+}
 
 .section-container {
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.svg-icon {
+  width: 24px;
+  height: 24px;
+  background-color: rgb(0, 0, 0);
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+
+.icon-inbox{
+  mask: url('../../assets/imgs/header/home.svg') no-repeat center;
+  -webkit-mask: url('../../assets/imgs/header/home.svg') no-repeat center;
+}
+.icon-rooms{
+  mask: url('../../assets/imgs/header/rooms.svg') no-repeat center;
+  -webkit-mask: url('../../assets/imgs/header/rooms.svg') no-repeat center;
+}
+.icon-room-service{
+  mask: url('../../assets/imgs/header/room-service.svg') no-repeat center;
+  -webkit-mask: url('../../assets/imgs/header/room-service.svg') no-repeat center;
+}
+.icon-bookings{
+  mask: url('../../assets/imgs/header/bookings.svg') no-repeat center;
+  -webkit-mask: url('../../assets/imgs/header/bookings.svg') no-repeat center;
+}
+.icon-message{
+  mask: url('../../assets/imgs/header/message.svg') no-repeat center;
+  -webkit-mask: url('../../assets/imgs/header/message.svg') no-repeat center;
 }
