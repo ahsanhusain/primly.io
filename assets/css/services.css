@@ -113,9 +113,8 @@
 
 .search-btn {
     padding: 12px 32px;
-    background: #1976d2;
-    color: white;
-    border: none;
+    background: white;
+    border: 2px solid #e0e0e0;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
@@ -125,7 +124,7 @@
 }
 
 .search-btn:hover {
-    background: #1565c0;
+    background: #e0e0e0;
 }
 
 /* Car Listings Section */

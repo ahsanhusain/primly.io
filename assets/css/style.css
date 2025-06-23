@@ -135,6 +135,7 @@ header {
 
 .user-dropdown.open .dropdown-menu {
   display: flex;
+  z-index: 10;
 }
 
 .nav-links {
@@ -194,6 +195,10 @@ header {
   .nav-search-box, .user-dropdown {
     width: 100%;
     max-width: 100%;
+  }
+
+  .nav-search-box {
+    display: none;
   }
 
   .nav-links {

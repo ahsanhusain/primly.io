@@ -69,52 +69,40 @@
             <div class="filters-row">
                 <!-- Location Filter -->
                 <div class="filter-dropdown">
-                    <button class="filter-btn" id="locationBtn">
-                        <span class="filter-icon">
-                            <img src="assets/imgs/room_req/location.svg" alt="Location" loading="lazy">
-                        </span>
-                        <span class="filter-text">Location</span>
-                        <span class="dropdown-arrow">▼</span>
-                    </button>
-                    <div class="ddropdown-menu" id="locationMenu">
-                        <a href="#" class="ddropdown-item">Karachi</a>
-                        <a href="#" class="ddropdown-item">Lahore</a>
-                        <a href="#" class="ddropdown-item">Islamabad</a>
-                        <a href="#" class="ddropdown-item">Multan</a>
+                    <div class="custom-select-wrapper">
+                        <select class="custom-select">
+                            <option disabled selected>Location</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Multan">Multan</option>
+                        </select>
                     </div>
                 </div>
 
                 <!-- Province Filter -->
                 <div class="filter-dropdown">
-                    <button class="filter-btn" id="provinceBtn">
-                        <span class="filter-icon">
-                            <img src="assets/imgs/room_req/location.svg" alt="Province/state" loading="lazy">
-                        </span>
-                        <span class="filter-text">Province/state</span>
-                        <span class="dropdown-arrow">▼</span>
-                    </button>
-                    <div class="ddropdown-menu" id="provinceMenu">
-                        <a href="#" class="ddropdown-item">Punjab</a>
-                        <a href="#" class="ddropdown-item">Sindh</a>
-                        <a href="#" class="ddropdown-item">KPK</a>
-                        <a href="#" class="ddropdown-item">Balochistan</a>
+                    <div class="custom-select-wrapper">
+                        <select class="custom-select">
+                            <option disabled selected>Province/state</option>
+                            <option value="punjab">Punjab</option>
+                            <option value="sindh">Sindh</option>
+                            <option value="kpk">KPK</option>
+                            <option value="balochistan">Balochistan</option>
+                        </select>
                     </div>
                 </div>
 
                 <!-- Type Filter -->
                 <div class="filter-dropdown">
-                    <button class="filter-btn" id="typeBtn">
-                        <span class="filter-icon">
-                            <img src="assets/imgs/type.svg" alt="Type" loading="lazy">
-                        </span>
-                        <span class="filter-text">Type (Nature, Historical, Luxury, Budget)</span>
-                        <span class="dropdown-arrow">▼</span>
-                    </button>
-                    <div class="ddropdown-menu" id="typeMenu">
-                        <a href="#" class="ddropdown-item">Historical</a>
-                        <a href="#" class="ddropdown-item">Nature</a>
-                        <a href="#" class="ddropdown-item">Luxury</a>
-                        <a href="#" class="ddropdown-item">Budget</a>
+                    <div class="custom-select-wrapper">
+                        <select class="custom-select custom-select-type">
+                            <option disabled selected>Type (Nature, Historical, Luxury, Budget)</option>
+                            <option value="historical">Historical</option>
+                            <option value="nature">Nature</option>
+                            <option value="luxury">Luxury</option>
+                            <option value="budget">Budget</option>
+                        </select>
                     </div>
                 </div>
             </div>
