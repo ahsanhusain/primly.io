@@ -1,10 +1,4 @@
 // DOM Elements
-const locationBtn = document.getElementById('locationBtn');
-const locationMenu = document.getElementById('locationMenu');
-const provinceBtn = document.getElementById('provinceBtn');
-const provinceMenu = document.getElementById('provinceMenu');
-const typeBtn = document.getElementById('typeBtn');
-const typeMenu = document.getElementById('typeMenu');
 
 // Dropdown functionality
 function toggleDropdown(button, menu) {
@@ -27,21 +21,6 @@ function closeAllDropdowns() {
     allMenus.forEach(menu => menu.classList.remove('show'));
     allArrows.forEach(arrow => arrow.style.transform = 'rotate(0deg)');
 }
-
-locationBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    toggleDropdown(locationBtn, locationMenu);
-});
-
-provinceBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    toggleDropdown(provinceBtn, provinceMenu);
-});
-
-typeBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    toggleDropdown(typeBtn, typeMenu);
-});
 
 // Close dropdowns when clicking outside
 document.addEventListener('click', () => {
