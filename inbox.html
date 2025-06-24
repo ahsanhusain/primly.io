@@ -328,6 +328,46 @@
         .floating-message-box.hidden {
             display: none;
         }
+
+        /* Accordion Styles */
+        .accordion .accordion-header {
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.2s;
+            border-radius: 10px;
+            background: #E4F4F8;
+            margin-bottom: 2px;
+        }
+        .accordion .accordion-header:hover {
+            background: #e0f7fa;
+        }
+        .accordion .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .accordion .accordion-item.active .accordion-content {
+            max-height: 500px; /* or a value large enough for your content */
+            transition: max-height 0.5s ease;
+        }
+        .accordion .accordion-item.active .chevron-icon {
+            transform: rotate(180deg);
+        }
+        ._thread-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        ._thread-title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .accordion-item.active .accordion-header {
+            background: #488FA1;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -400,47 +440,142 @@
             </div>
 
             <!-- Message Groups -->
-            <div class="message-group primary">
-                <div class="message-title">Title: Property 1</div>
-                <div class="message-item">
-                    <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
-                    <div class="message-content">Test message</div>
+            <div class="accordion">
+                <div class="accordion-item primary">
+                    <div class="accordion-header message-title">
+                        <div class="_thread-header">
+                            <div class="_thread-title">
+                                <div class="">Title: Property 1</div>
+                                <div>
+                                    <span class="icon-compose" title="Compose" style="margin-right:8px;vertical-align:middle;cursor:pointer;" onclick="toggleMessageBox(event)">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                            <path d="M12 21h9" />
+                                        </svg>
+                                    </span>
+                                    <span class="icon-edit" title="Edit" style="margin-right:8px;vertical-align:middle;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 8 10 12 14 8"></polyline></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="message-item">
+                            <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
+                            <div class="message-content">Test message</div>
+                        </div>
+                        <div class="message-item">
+                            <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
+                            <div class="message-content">Test 2</div>
+                        </div>
+                        <div class="message-item">
+                            <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
+                            <div class="message-content">Test 3</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="message-item">
-                    <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
-                    <div class="message-content">Test 2</div>
+                <div class="accordion-item secondary">
+                    <div class="accordion-header message-title">
+                        <div class="_thread-header">
+                            <div class="_thread-title">
+                                <div class="">Title: Hi</div>
+                                <div>
+                                    <span class="icon-compose" title="Compose" style="margin-right:8px;vertical-align:middle;cursor:pointer;" onclick="toggleMessageBox(event)">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                            <path d="M12 21h9" />
+                                        </svg>
+                                    </span>
+                                    <span class="icon-edit" title="Edit" style="margin-right:8px;vertical-align:middle;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 8 10 12 14 8"></polyline></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="message-item">
+                            <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="message-item">
-                    <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
-                    <div class="message-content">Test 3</div>
+                <div class="accordion-item secondary">
+                   <div class="accordion-header message-title">
+                        <div class="_thread-header">
+                            <div class="_thread-title">
+                                <div class="">Title: Hey</div>
+                                <div>
+                                    <span class="icon-compose" title="Compose" style="margin-right:8px;vertical-align:middle;cursor:pointer;" onclick="toggleMessageBox(event)">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                            <path d="M12 21h9" />
+                                        </svg>
+                                    </span>
+                                    <span class="icon-edit" title="Edit" style="margin-right:8px;vertical-align:middle;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 8 10 12 14 8"></polyline></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="message-item">
+                            <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="message-group secondary">
-                <div class="message-title">Title: Hi</div>
-                <div class="message-item">
-                    <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
-                </div>
-            </div>
-
-            <div class="message-group secondary">
-                <div class="message-title">Title: Hey</div>
-                <div class="message-item">
-                    <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
-                </div>
-            </div>
-
-            <div class="message-group secondary">
-                <div class="message-title">Title: Hey</div>
-                <div class="message-item">
-                    <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
+                <div class="accordion-item secondary">
+                   <div class="accordion-header message-title">
+                        <div class="_thread-header">
+                            <div class="_thread-title">
+                                <div class="">Title: Hey</div>
+                                <div>
+                                    <span class="icon-compose" title="Compose" style="margin-right:8px;vertical-align:middle;cursor:pointer;" onclick="toggleMessageBox(event)">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                            <path d="M12 21h9" />
+                                        </svg>
+                                    </span>
+                                    <span class="icon-edit" title="Edit" style="margin-right:8px;vertical-align:middle;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 8 10 12 14 8"></polyline></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="message-item">
+                            <div class="message-timestamp">You sent a message to Atif Host on Apr 12, 2025 at 10:52 PM.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Floating Message Box -->
-    <div class="floating-message-box" id="messageBox">
+    <div class="floating-message-box hidden" id="messageBox">
         <div class="message-box-header">Property 1</div>
         <div class="message-box-content">
             <textarea 
@@ -454,7 +589,7 @@
             </div>
             <div class="message-actions">
                 <button class="btn btn-send" onclick="sendMessage()">Send</button>
-                <button class="btn btn-cancel" onclick="toggleMessageBox()">Cancel</button>
+                <button class="btn btn-cancel" onclick="toggleMessageBox(event)">Cancel</button>
             </div>
         </div>
     </div>
@@ -523,9 +658,9 @@
     </footer>
 
     <!-- Floating Chat Icon -->
-    <div class="floating-chat-icon" onclick="toggleMessageBox()">
+   <!-- <div class="floating-chat-icon" onclick="toggleMessageBox(event)">
         <img src="assets/imgs/chat.png" alt="Chat"  loading="lazy" style="width: 100%;">
-    </div>
+    </div> -->
 
     <script>
         // Character counter functionality
@@ -548,7 +683,8 @@
         });
 
         // Toggle message box visibility
-        function toggleMessageBox() {
+        function toggleMessageBox(e) {
+            e.preventDefault();
             messageBox.classList.toggle('hidden');
         }
 
@@ -560,7 +696,7 @@
                 textarea.value = '';
                 charCount.textContent = '0';
                 charCount.style.color = '#6c757d';
-                toggleMessageBox();
+                toggleMessageBox(e);
             } else {
                 alert('Please enter a message before sending.');
             }
@@ -608,8 +744,16 @@
                 sendMessage();
             }
             if (e.key === 'Escape') {
-                toggleMessageBox();
+                toggleMessageBox(e);
             }
+        });
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const item = this.parentElement;
+                item.classList.toggle('active');
+            });
         });
     </script>
     <script src="https://kit.fontawesome.com/b0fdd5ba81.js" crossorigin="anonymous"></script>
