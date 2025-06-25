@@ -88,14 +88,17 @@
             margin-bottom: 20px;
         }
 
-        .quick-links a {
+        .quick-links a,
+        .quick-links span {
             color: #5bc0de;
             text-decoration: none;
             font-size: 0.9rem;
             margin: 0 5px;
+            cursor: pointer; /* Optional: shows pointer cursor on hover */
         }
 
-        .quick-links a:hover {
+        .quick-links a:hover,
+        .quick-links span:hover {
             text-decoration: underline;
         }
 
@@ -432,11 +435,14 @@
                     <h2 class="thread-title">Message Thread</h2>
                     <p class="thread-subject">Subject: Hi</p>
                 </div>
-                <a href="#" class="refresh-link">Refresh</a>
+                
+                <div class="quick-links">
+                <span onclick="toggleMessageBox(event)">Compose New</span> | <a href="#" class="refresh-link">Refresh</a>
+            </div>
             </div>
 
             <div class="quick-links">
-                <a href="#">Booking Details</a> | <a href="#">Atif Host's Reviews</a>
+                <a href="#" >Booking Details</a> | <a href="#">Atif Host's Reviews</a>
             </div>
 
             <!-- Message Groups -->
@@ -447,20 +453,17 @@
                             <div class="_thread-title">
                                 <div class="">Title: Property 1</div>
                                 <div>
-                                    <span class="icon-compose" title="Compose" style="margin-right:8px;vertical-align:middle;cursor:pointer;" onclick="toggleMessageBox(event)">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
-                                            <path d="M12 21h9" />
-                                        </svg>
-                                    </span>
-                                    <span class="icon-edit" title="Edit" style="margin-right:8px;vertical-align:middle;">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
-                                        </svg>
-                                    </span>
+                                    <div class="quick-links" style="margin-bottom: 0;">
+                                        <span href="#" onclick="toggleMessageBox(event)">
+                                            Compose
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                            </svg>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;">
+                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;margin-top: 7px;">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 8 10 12 14 8"></polyline></svg>
                             </div>
                         </div>
@@ -486,20 +489,17 @@
                             <div class="_thread-title">
                                 <div class="">Title: Hi</div>
                                 <div>
-                                    <span class="icon-compose" title="Compose" style="margin-right:8px;vertical-align:middle;cursor:pointer;" onclick="toggleMessageBox(event)">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
-                                            <path d="M12 21h9" />
-                                        </svg>
-                                    </span>
-                                    <span class="icon-edit" title="Edit" style="margin-right:8px;vertical-align:middle;">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
-                                        </svg>
-                                    </span>
+                                    <div class="quick-links" style="margin-bottom: 0;">
+                                        <span href="#" onclick="toggleMessageBox(event)">
+                                            Compose
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                            </svg>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;">
+                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;margin-top: 7px;">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 8 10 12 14 8"></polyline></svg>
                             </div>
                         </div>
@@ -516,20 +516,17 @@
                             <div class="_thread-title">
                                 <div class="">Title: Hey</div>
                                 <div>
-                                    <span class="icon-compose" title="Compose" style="margin-right:8px;vertical-align:middle;cursor:pointer;" onclick="toggleMessageBox(event)">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
-                                            <path d="M12 21h9" />
-                                        </svg>
-                                    </span>
-                                    <span class="icon-edit" title="Edit" style="margin-right:8px;vertical-align:middle;">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
-                                        </svg>
-                                    </span>
+                                    <div class="quick-links" style="margin-bottom: 0;">
+                                        <span href="#" onclick="toggleMessageBox(event)">
+                                            Compose
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                            </svg>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;">
+                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;margin-top: 7px;">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 8 10 12 14 8"></polyline></svg>
                             </div>
                         </div>
@@ -546,20 +543,17 @@
                             <div class="_thread-title">
                                 <div class="">Title: Hey</div>
                                 <div>
-                                    <span class="icon-compose" title="Compose" style="margin-right:8px;vertical-align:middle;cursor:pointer;" onclick="toggleMessageBox(event)">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
-                                            <path d="M12 21h9" />
-                                        </svg>
-                                    </span>
-                                    <span class="icon-edit" title="Edit" style="margin-right:8px;vertical-align:middle;">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
-                                        </svg>
-                                    </span>
+                                    <div class="quick-links" style="margin-bottom: 0;">
+                                        <span href="#" onclick="toggleMessageBox(event)">
+                                            Compose
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#5bc0de" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M16.5 3.5l4 4L7 21l-4 1 1-4L16.5 3.5z" />
+                                            </svg>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;">
+                            <div class="chevron-icon" style="float:right;transition:transform 0.3s;margin-top: 7px;">
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#2c3e50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 8 10 12 14 8"></polyline></svg>
                             </div>
                         </div>
