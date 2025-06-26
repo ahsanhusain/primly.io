@@ -391,3 +391,7 @@ a {
   mask: url('../../assets/imgs/header/message.svg') no-repeat center;
   -webkit-mask: url('../../assets/imgs/header/message.svg') no-repeat center;
 }
+
+.font-bold {
+  font-weight: bold;
+}

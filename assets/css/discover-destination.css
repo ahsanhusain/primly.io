@@ -265,6 +265,7 @@ body {
     
     .hero {
         padding: 2rem 0;
+        background-image: none !important;
     }
     
     .hero-title {
